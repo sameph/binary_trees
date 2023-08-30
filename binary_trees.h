@@ -1,17 +1,15 @@
 #ifndef BINARY_TREES_H
 #define BINARY_TREES_H
 
-#include <string.h>
-#include <unistd.h>
-#include <math.h>
-#include <limits.h>
-
 #include <stdlib.h>
 #include <stddef.h>
 #include <stdlib.h>
 #include <stdio.h>
-
-**
+#include <string.h>
+#include <unistd.h>
+#include <math.h>
+#include <limits.h>
+/**
  * struct binary_tree_s - Binary tree node
  * done by temesgen abdissa & samuel degneh
  * @n: Int stored in the node
@@ -33,6 +31,7 @@ typedef struct binary_tree_s bst_t;
 
 void binary_tree_print(const binary_tree_t *);
 
+ /* All mandatory tasks */
 int binary_tree_is_leaf(const binary_tree_t *node);
 int binary_tree_is_root(const binary_tree_t *node);
 void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int));
@@ -53,6 +52,7 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
 void binary_tree_delete(binary_tree_t *tree);
 
+/*  All of the Advanced tasks */
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 				     const binary_tree_t *second);
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
@@ -75,6 +75,7 @@ int binary_tree_is_avl(const binary_tree_t *tree);
 avl_t *avl_insert(avl_t **tree, int value);
 avl_t *array_to_avl(int *array, size_t size);
 
+/* All of the  helper functions */
 int _pow_recursion(int x, int y);
 binary_tree_t *bta_helper(binary_tree_t *root, const binary_tree_t *first,
 			  const binary_tree_t *second);
